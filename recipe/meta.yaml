@@ -1,25 +1,24 @@
-{% set name = "jupyter-panel-proxy" %}
 {% set version = "0.1.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: jupyter-panel-proxy
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/j/jupyter-panel-proxy/jupyter-panel-proxy-{{ version }}.tar.gz
   sha256: 4d65091afa2fcd07ed16a3da291137e9955a49fa30664fde72a62bd60382a431
 
 build:
-  noarch: python
   number: 0
+  noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python
+    - python >=3
     - pip
   run:
-    - python
+    - python >=3
     - panel
     - jupyter-server-proxy
 
