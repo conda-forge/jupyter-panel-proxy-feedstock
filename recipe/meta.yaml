@@ -5,24 +5,26 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/j/jupyter-panel-proxy/jupyter-panel-proxy-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/j/jupyter-panel-proxy/jupyter-panel-proxy-{{ version }}.tar.gz
   sha256: 4d65091afa2fcd07ed16a3da291137e9955a49fa30664fde72a62bd60382a431
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python >=3
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3
+    - python >={{ python_min }}
     - panel
     - jupyter-server-proxy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - panel
 
