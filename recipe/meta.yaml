@@ -17,9 +17,12 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - hatchling >=1.25.0
+    - hatch-vcs >=0.4.0
   run:
     - python >={{ python_min }}
-    - panel
+    - panel >=0.11
+    - pyyaml
     - jupyter-server-proxy
 
 test:
@@ -29,7 +32,7 @@ test:
     - panel
 
 about:
-  home: https://github.com/pyviz/jupyter-panel-proxy
+  home: https://github.com/holoviz/jupyter-panel-proxy
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
@@ -38,7 +41,7 @@ about:
     When jupyter-panel-proxy is installed and you run `jupyter notebook`,
     you'll find the served version of the panel app at the regular url
     such as `http://localhost:8888` followed by `panel/<name_of_file>`
-  dev_url: https://github.com/pyviz/jupyter-panel-proxy
+  dev_url: https://github.com/holoviz/jupyter-panel-proxy
 
 extra:
   recipe-maintainers:
