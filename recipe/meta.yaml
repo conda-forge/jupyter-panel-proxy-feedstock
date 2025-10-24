@@ -35,7 +35,7 @@ about:
   home: https://github.com/holoviz/jupyter-panel-proxy
   license: BSD-3-Clause
   license_family: BSD
-  license_file: LICENSE.txt
+  license_file: LICENSE
   summary: 'Jupyter Server Proxy for Panel applications'
   description: |
     When jupyter-panel-proxy is installed and you run `jupyter notebook`,
